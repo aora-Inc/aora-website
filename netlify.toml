@@ -1,8 +1,8 @@
 # Netlify 設定ファイル
 
 [build]
-  # ビルドコマンド（静的サイトなので不要）
-  command = ""
+  # ビルドコマンド: ニュースインデックスを生成
+  command = "npm run build"
   
   # 公開ディレクトリ（ルートディレクトリ）
   publish = "."
@@ -39,6 +39,13 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# JSONファイルの正しいContent-Typeヘッダー
+[[headers]]
+  for = "*.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Cache-Control = "public, max-age=300"
+
 # Netlify Forms設定
 [build.processing]
   skip_processing = false
@@ -53,7 +60,7 @@
   minify = false
 
 [build.processing.html]
-  pretty_urls = true
+  pretty_urls = false
 
 [build.processing.images]
   compress = false
