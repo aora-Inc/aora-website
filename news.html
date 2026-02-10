@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ニュース - aora株式会社 | Creative Fintech Studio</title>
+  <meta name="description" content="aora株式会社の最新ニュース、プレスリリース、イベント情報をご覧ください。PUCの最新情報、パートナーシップ、製品発表などをお届けします。">
+  <meta name="keywords" content="aora, PUC, ニュース, プレスリリース, イベント, 環境ポイント, カーボンクレジット">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="ニュース - aora株式会社 | Creative Fintech Studio">
+  <meta property="og:description" content="aora株式会社の最新ニュースとプレスリリース">
+  <meta property="og:type" content="website">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/news.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html" aria-label="aoraホームページ">
+          <div class="logo-wrapper">
+            <img src="images/aora-04.png" alt="aora logo" class="logo-icon-img logo-light">
+            <img src="images/aora-06.png" alt="aora logo" class="logo-icon-img logo-dark">
+            <img src="images/aora-03.png" alt="aora" class="logo-text-img logo-light">
+            <img src="images/aora-05.png" alt="aora" class="logo-text-img logo-dark">
+          </div>
+        </a>
+      </div>
+      
+      <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-links" id="nav-menu" role="navigation">
+        <li><a href="index.html#what-we-do">What We Do</a></li>
+        <li><a href="index.html#puc">PUC</a></li>
+        <li><a href="index.html#approach">Approach</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="theme-switcher">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="テーマ切替">
+            <span class="theme-icon theme-icon-dark">🌙</span>
+            <span class="theme-icon theme-icon-light">☀️</span>
+          </button>
+        </li>
+        <li class="lang-switcher">
+          <a href="news.html" class="lang-link active">JP</a>
+          <span class="lang-separator">/</span>
+          <a href="news-en.html" class="lang-link">EN</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="news-hero">
+    <div class="container">
+      <div class="hero-bg">
+        <canvas class="grid-canvas"></canvas>
+        <div class="orb"></div>
+      </div>
+      
+      <div class="news-hero-content">
+        <span class="news-label">News & Press Releases</span>
+        <h1 class="news-hero-title">
+          <span class="text-gradient">ニュース</span>
+        </h1>
+        <p class="news-hero-subtitle">
+          aora株式会社の最新情報、プレスリリース、イベント情報をお届けします
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="news-filters-section">
+    <div class="container">
+      <div class="news-filters">
+        <button class="filter-btn active" data-category="all">すべて</button>
+        <button class="filter-btn" data-category="プレスリリース">プレスリリース</button>
+        <button class="filter-btn" data-category="イベント">イベント</button>
+        <button class="filter-btn" data-category="製品発表">製品発表</button>
+        <button class="filter-btn" data-category="パートナーシップ">パートナーシップ</button>
+        <button class="filter-btn" data-category="その他">その他</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Grid -->
+  <section class="news-content-section">
+    <div class="container">
+      <div class="news-grid" id="newsGrid">
+        <!-- ニュース記事はJavaScriptで動的に読み込まれます -->
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+          <p>読み込み中...</p>
+        </div>
+      </div>
+      
+      <!-- Pagination -->
+      <div class="pagination" id="pagination">
+        <!-- ページネーションはJavaScriptで生成されます -->
+      </div>
+    </div>
+  </section>
+
+  <!-- News Detail Modal -->
+  <div id="newsModal" class="news-modal" aria-hidden="true">
+    <div class="news-modal-overlay"></div>
+    <div class="news-modal-content">
+      <button class="news-modal-close" aria-label="閉じる">&times;</button>
+      <div class="news-modal-body">
+        <!-- Content will be loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <div class="logo-wrapper">
+              <img src="images/aora-04.png" alt="aora logo" class="logo-icon-img">
+              <img src="images/aora-03.png" alt="aora" class="logo-text-img">
+            </div>
+          </div>
+          <p class="footer-tagline">Creative Fintech Studio</p>
+          <p class="footer-description">
+            未来のための循環型経済を創造する
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="index.html#what-we-do">What We Do</a></li>
+              <li><a href="index.html#puc">PUC</a></li>
+              <li><a href="index.html#approach">Approach</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="mailto:contact@ao-ra.com">contact@ao-ra.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 aora株式会社. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/news.js"></script>
+</body>
+</html>

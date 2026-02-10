@@ -1,0 +1,7 @@
+# Netlify Redirects
+
+# SPA fallback - すべての404を index.html にリダイレクト
+/*    /index.html   200
+
+# Admin ページは除外（CMSアクセス用）
+/admin/*  200

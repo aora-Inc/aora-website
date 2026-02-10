@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Detection</title>
+</head>
+<body>
+  <!-- Netlify Forms 検出用のダミーフォーム -->
+  
+  <!-- 日本語版 統合フォーム -->
+  <form name="contact" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input name="bot-field" />
+    <input name="name" />
+    <input name="company" required />
+    <input name="email" />
+    <input name="phone" />
+    <select name="subject">
+      <option value="PUCに関する問い合わせ">PUCに関する問い合わせ</option>
+      <option value="資料請求">資料請求</option>
+    </select>
+    <input type="checkbox" name="documents[]" value="サービス資料" />
+    <textarea name="message"></textarea>
+  </form>
+  
+  <!-- 英語版 統合フォーム -->
+  <form name="contact-en" method="POST" action="/success-en.html" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact-en" />
+    <input name="bot-field" />
+    <input name="name" />
+    <input name="company" required />
+    <input name="email" />
+    <input name="phone" />
+    <select name="subject">
+      <option value="Inquiry about PUC">Inquiry about PUC</option>
+      <option value="Document Request">Document Request</option>
+    </select>
+    <input type="checkbox" name="documents[]" value="Service Overview" />
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>

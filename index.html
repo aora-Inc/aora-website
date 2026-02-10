@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="aora株式会社 - Creative Fintech Studio | 金融×IP×クリエイティブ×ゲーミフィケーション">
+  <title>aora株式会社 | Creative Fintech Studio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/aora-logo-icon.png">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+  <!-- OGP Meta Tags -->
+  <meta property="og:title" content="aora株式会社 | Creative Fintech Studio">
+  <meta property="og:description" content="金融×IP×クリエイティブ×ゲーミフィケーション">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/aora-logo-icon.png">
+</head>
+<body>
+
+  <!-- Skip to main content (Accessibility) -->
+  <a href="#main-content" class="skip-link sr-only">メインコンテンツへスキップ</a>
+
+  <!-- ========================================
+       HEADER
+  ======================================== -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html" aria-label="aoraホームページ">
+          <div class="logo-wrapper">
+            <img src="images/aora-04.png" alt="aora logo" class="logo-icon-img logo-light">
+            <img src="images/aora-06.png" alt="aora logo" class="logo-icon-img logo-dark">
+            <img src="images/aora-03.png" alt="aora" class="logo-text-img logo-light">
+            <img src="images/aora-05.png" alt="aora" class="logo-text-img logo-dark">
+          </div>
+        </a>
+      </div>
+      
+      <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-links" id="nav-menu" role="navigation">
+        <li><a href="#what-we-do">What We Do</a></li>
+        <li><a href="#puc">PUC</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="theme-switcher">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="テーマ切替">
+            <span class="theme-icon theme-icon-dark">🌙</span>
+            <span class="theme-icon theme-icon-light">☀️</span>
+          </button>
+        </li>
+        <li class="lang-switcher">
+          <a href="index.html" class="lang-link active">JP</a>
+          <span class="lang-separator">/</span>
+          <a href="index-en.html" class="lang-link">EN</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <!-- ========================================
+       HERO SECTION
+  ======================================== -->
+  <section id="main-content" class="hero" role="main">
+    <!-- Animated Background -->
+    <div class="hero-bg">
+      <div class="grid-canvas"></div>
+      
+      <!-- Circular Economy Visualization -->
+      <div class="circular-flow">
+        <div class="circle-ring circle-ring-1"></div>
+        <div class="circle-ring circle-ring-2"></div>
+        <div class="circle-ring circle-ring-3"></div>
+        <div class="flow-particles">
+          <div class="flow-particle flow-particle-1"></div>
+          <div class="flow-particle flow-particle-2"></div>
+          <div class="flow-particle flow-particle-3"></div>
+          <div class="flow-particle flow-particle-4"></div>
+          <div class="flow-particle flow-particle-5"></div>
+          <div class="flow-particle flow-particle-6"></div>
+        </div>
+      </div>
+      
+      <div class="orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+    </div>
+    
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="hero-label fade-in">Creative Fintech Studio</div>
+      <h1 class="hero-title fade-in fade-in-delay-1">
+        <div class="logo-container">
+          <!-- Dark mode logos -->
+          <!-- <img src="https://www.genspark.ai/api/files/s/2WD9XnDW" alt="aora icon" class="logo-icon logo-dark" /> -->
+          <img src="https://www.genspark.ai/api/files/s/u4PY3yCD" alt="aora" class="logo-text logo-dark" />
+          <!-- Light mode logos -->
+          <!-- <img src="https://www.genspark.ai/api/files/s/KegXTH1L" alt="aora icon" class="logo-icon logo-light" /> -->
+          <img src="https://www.genspark.ai/api/files/s/4gwIF8yA" alt="aora" class="logo-text logo-light" />
+        </div>
+      </h1>
+      <p class="hero-subtitle fade-in fade-in-delay-2">
+        未来のための循環型経済を創造する
+      </p>
+      <div class="hero-cta fade-in fade-in-delay-3">
+        <a href="#puc" class="btn btn-primary">
+          <span>Discover PUC</span>
+        </a>
+        <a href="#what-we-do" class="btn btn-secondary">
+          <span>What We Do</span>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ========================================
+       WHAT WE DO SECTION
+  ======================================== -->
+  <section id="what-we-do" class="what-we-do">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-subtitle">4つのコア領域を統合した、新しい環境価値経済の創造</p>
+      </div>
+      
+      <div class="core-grid">
+        
+        <div class="core-card scroll-reveal" data-core="finance">
+          <div class="core-icon-custom">
+            <div class="icon-finance-coin">
+              <img src="images/puc-coin.png" alt="PUC Coin" class="puc-coin-img">
+            </div>
+          </div>
+          <h3 class="core-title">Fintech</h3>
+          <p class="core-description">
+            持続可能な社会を隔てるコストの壁を新たなエコシステムで解決します。企業も個人も地球も喜ぶ経済の実現。
+          </p>
+          <ul class="core-features">
+            <li>カーボンクレジットのポイント化</li>
+            <li>PUC通貨システムの設計</li>
+            <li>環境価値のマイクロファイナンス</li>
+          </ul>
+        </div>
+        
+        <div class="core-card scroll-reveal" data-core="ip">
+          <div class="core-icon-custom">
+            <div class="pucre-characters-base">
+              <img src="images/pucre-base-1.png" alt="Pucre Base Character 1" class="pucre-char-base">
+              <img src="images/pucre-base-2.png" alt="Pucre Base Character 2" class="pucre-char-base">
+              <img src="images/pucre-base-3.png" alt="Pucre Base Character 3" class="pucre-char-base">
+            </div>
+          </div>
+          <h3 class="core-title">IP Development</h3>
+          <p class="core-description">
+            深刻な環境問題を、親しみやすいカルチャーへ。キャラクター、ストーリー、世界観を通じて、環境への意識を「楽しい文化」として社会に根付かせます。
+          </p>
+          <ul class="core-features">
+            <li>環境問題のカルチャー化</li>
+            <li>キャラクターIP開発（Pucre）</li>
+            <li>ストーリー設計</li>
+          </ul>
+        </div>
+        
+        <div class="core-card scroll-reveal" data-core="creative">
+          <div class="core-icon-custom">
+            <div class="icon-creative">
+              <div class="play-button">
+                <div class="play-triangle"></div>
+              </div>
+              <div class="sound-waves">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <h3 class="core-title">Creative</h3>
+          <p class="core-description">
+            環境への取り組みを、映像と音楽で表現。データや数字ではなく、感情を動かすコンテンツで、本質的な共感を生み出します。
+          </p>
+          <ul class="core-features">
+            <li>環境アクション動画制作</li>
+            <li>環境テーマ楽曲開発</li>
+            <li>ビジュアルストーリーテリング</li>
+          </ul>
+        </div>
+        
+        <div class="core-card scroll-reveal" data-core="game">
+          <div class="core-icon-custom">
+            <div class="iphone-mockup">
+              <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                  <!-- Pucreアプリ プレースホルダー -->
+                  <div class="app-placeholder">
+                    <div class="pucre-preview">
+                      <div class="preview-character">
+                        <img src="images/four-kids.png" alt="フォー・キッズ" class="character-img">
+                      </div>
+                      <div class="preview-progress">
+                        <div class="progress-bar">
+                          <div class="progress-fill"></div>
+                        </div>
+                        <span class="progress-text">2,086 / 10,000</span>
+                      </div>
+                      <div class="preview-nav">
+                        <div class="nav-item">📊</div>
+                        <div class="nav-item">📅</div>
+                        <div class="nav-item active">👕</div>
+                        <div class="nav-item">⚙️</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="iphone-home-indicator"></div>
+              </div>
+            </div>
+          </div>
+          <h3 class="core-title">Gamification</h3>
+          <p class="core-description">
+            Pucreアプリで実現する、キャラクター成長とゲーム性。レベルアップ、リワード、ミッション。遊ぶように環境貢献できる体験を設計します。
+          </p>
+          <ul class="core-features">
+            <li>キャラクター成長システム</li>
+            <li>レベルアップ・リワード設計</li>
+            <li>デイリーミッション機能</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PUC SECTION
+  ======================================== -->
+  <section id="puc" class="puc-section">
+    <div class="container">
+      <div class="puc-content">
+        <div class="puc-left scroll-reveal">
+          <div class="puc-label">Our Main Product</div>
+          <h2 class="puc-title"><span class="text-gradient">PUC</span></h2>
+          <p class="puc-description">
+            PUC（ぷく）は、カーボンクレジットをポイントとして日常で使える新しい環境ポイントです。サービスの利用、Pucreアプリ、提携アプリでPUCを獲得できます。PUCが発行されることが環境保全を継続するための資金につながります。
+          </p>
+          <div class="puc-features">
+            <div class="puc-feature">
+              <div class="feature-number">01</div>
+              <div class="feature-text">
+                <h4>貯める</h4>
+                <p>Pucreアプリで日常の行動をPUCポイントに変換</p>
+              </div>
+            </div>
+            <div class="puc-feature">
+              <div class="feature-number">02</div>
+              <div class="feature-text">
+                <h4>育てる</h4>
+                <p>キャラクターが成長する、ゲーム性のある体験</p>
+              </div>
+            </div>
+            <div class="puc-feature">
+              <div class="feature-number">03</div>
+              <div class="feature-text">
+                <h4>動かす</h4>
+                <p>企業が環境プロジェクトへ投資、本物のCO2削減を実現</p>
+              </div>
+            </div>
+          </div>
+          <div class="puc-cta">
+            <a href="#contact" class="btn btn-primary"><span>PUCについて問い合わせる</span></a>
+          </div>
+        </div>
+        <div class="puc-right scroll-reveal">
+          <div class="puc-visual">
+            <div class="puc-circle puc-circle-1"></div>
+            <div class="puc-circle puc-circle-2"></div>
+            <div class="puc-circle puc-circle-3"></div>
+            <div class="puc-circle puc-circle-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PUCRE APP SECTION
+  ======================================== -->
+  <section id="pucre-app" class="pucre-app-section">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">Pucre App</h2>
+        <p class="section-subtitle">キャラクターと一緒に楽しく環境貢献</p>
+      </div>
+      
+      <div class="pucre-app-content">
+        <!-- App Description -->
+        <div class="pucre-app-left scroll-reveal">
+          <div class="app-label">Mobile Application</div>
+          <h3 class="app-title"><span class="text-gradient">Pucre</span></h3>
+          <p class="app-description">
+            Pucre（プクレ）は、環境行動を楽しく続けられる育成アプリです。歩数や日常の環境配慮行動でPUCポイントを獲得し、キャラクターを育成。着せ替えやアイテム購入で、自分だけのPucreを育てることができます。
+          </p>
+          
+          <div class="app-features-list">
+            <div class="app-feature-item">
+              <div class="feature-icon">🚶</div>
+              <div class="feature-content">
+                <h4>歩数連携</h4>
+                <p>毎日の歩数に応じてPUCポイントを自動獲得</p>
+              </div>
+            </div>
+            <div class="app-feature-item">
+              <div class="feature-icon">👕</div>
+              <div class="feature-content">
+                <h4>キャラクター育成</h4>
+                <p>豊富な着せ替えアイテムでカスタマイズ</p>
+              </div>
+            </div>
+            <div class="app-feature-item">
+              <div class="feature-icon">🎁</div>
+              <div class="feature-content">
+                <h4>リワード交換</h4>
+                <p>貯めたPUCで実物商品やギフトと交換</p>
+              </div>
+            </div>
+            <div class="app-feature-item">
+              <div class="feature-icon">📊</div>
+              <div class="feature-content">
+                <h4>CO2削減可視化</h4>
+                <p>自分の環境貢献をリアルタイムで確認</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="app-cta">
+            <a href="#contact" class="btn btn-primary">
+              <span>アプリについて問い合わせる</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- App Screenshots -->
+        <div class="pucre-app-right scroll-reveal">
+          <div class="app-screens">
+            <div class="screen-mockup screen-1">
+              <div class="mockup-frame">
+                <img src="https://www.genspark.ai/api/files/s/7eP6nBjN" alt="Pucreメイン画面" class="app-screenshot" />
+              </div>
+            </div>
+            <div class="screen-mockup screen-2">
+              <div class="mockup-frame">
+                <img src="https://www.genspark.ai/api/files/s/ivVxfKVt" alt="Pucre着せ替え画面" class="app-screenshot" />
+              </div>
+            </div>
+            <div class="screen-mockup screen-3">
+              <div class="mockup-frame">
+                <img src="https://www.genspark.ai/api/files/s/S9txhdyK" alt="Pucreウォレット画面" class="app-screenshot" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       IMPACT SECTION
+  ======================================== -->
+  <section id="impact" class="impact-section">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">Impact</h2>
+        <p class="section-subtitle">測定可能な、本物のインパクト</p>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat-card scroll-reveal">
+          <div class="stat-number" data-target="12500">0</div>
+          <div class="stat-unit">トン</div>
+          <div class="stat-label">CO2削減</div>
+        </div>
+        <div class="stat-card scroll-reveal">
+          <div class="stat-number" data-target="150000000">0</div>
+          <div class="stat-unit">PUC</div>
+          <div class="stat-label">配布済み</div>
+        </div>
+        <div class="stat-card scroll-reveal">
+          <div class="stat-number" data-target="85000">0</div>
+          <div class="stat-unit">人</div>
+          <div class="stat-label">参加中</div>
+        </div>
+      </div>
+      
+      <div class="partners scroll-reveal">
+        <h3 class="partners-title">導入自治体・パートナー</h3>
+        <p class="partners-subtitle">多様な業界のリーディングカンパニーとの協業</p>
+        
+        <div class="partners-grid">
+          <!-- 自治体・スマートシティ -->
+          <div class="partner-category">
+            <div class="category-label">自治体・スマートシティ</div>
+            <div class="category-items">
+              <div class="partner-card">東京都</div>
+              <div class="partner-card">渋谷区</div>
+              <div class="partner-card">藤沢市</div>
+              <div class="partner-card">京都市</div>
+              <div class="partner-card">藤沢SST</div>
+            </div>
+          </div>
+          
+          <!-- 都市開発・運営 -->
+          <div class="partner-category">
+            <div class="category-label">都市開発・運営</div>
+            <div class="category-items">
+              <div class="partner-card">清水建設</div>
+              <div class="partner-card">大林組</div>
+              <div class="partner-card">東亜建設工業</div>
+              <div class="partner-card">東急株式会社</div>
+              <div class="partner-card">東急不動産SCマネジメント</div>
+            </div>
+          </div>
+          
+          <!-- その他パートナー -->
+          <div class="partner-category">
+            <div class="category-label">その他パートナー</div>
+            <div class="category-items">
+              <div class="partner-card">福島テレビ</div>
+              <div class="partner-card">VISION</div>
+              <div class="partner-card">象印マホービン</div>
+              <div class="partner-card">ホテルグラフィー</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       APPROACH SECTION
+  ======================================== -->
+  <section id="approach" class="approach-section">
+    <div class="container">
+      <div class="approach-content">
+        <div class="approach-left scroll-reveal">
+          <h2 class="approach-title">Our Approach</h2>
+          <p class="approach-description">
+            個人の環境行動だけでは、限界があります。4,000万人全員が近所の用事を徒歩に変えても、日本の削減目標のわずか<strong class="text-gradient">0.05%</strong>。
+          </p>
+          <p class="approach-description">
+            aoraは、日常の経済活動を環境投資に変換することで、追加性のある本物のCO2削減を実現します。
+          </p>
+        </div>
+        <div class="approach-right scroll-reveal">
+          <div class="approach-principles">
+            <div class="principle">
+              <div class="principle-number">01</div>
+              <h4>追加性</h4>
+              <p>既存の取り組みに加えて、新たな削減を創出</p>
+            </div>
+            <div class="principle">
+              <div class="principle-number">02</div>
+              <h4>測定可能性</h4>
+              <p>全てのインパクトを定量的に測定</p>
+            </div>
+            <div class="principle">
+              <div class="principle-number">03</div>
+              <h4>透明性</h4>
+              <p>オープンで検証可能なデータ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       NEWS SECTION
+  ======================================== -->
+  <section id="news" class="news-preview-section">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">News & Updates</h2>
+        <p class="section-subtitle">aora株式会社の最新情報をお届けします</p>
+      </div>
+      
+      <div class="news-preview-grid" id="newsPreview">
+        <!-- 最新ニュースはJavaScriptで読み込まれます -->
+        <div class="loading-mini">
+          <div class="spinner-mini"></div>
+        </div>
+      </div>
+      
+      <div class="news-cta scroll-reveal">
+        <a href="news.html" class="btn btn-secondary"><span>すべてのニュースを見る</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       CONTACT SECTION
+  ======================================== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">お気軽にお問い合わせください</p>
+      </div>
+      
+      <div class="contact-content">
+        <!-- 統合フォーム -->
+        <div class="form-container scroll-reveal">
+          <form name="contact" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">お名前 <span class="required">*</span></label>
+                <input type="text" id="contact-name" name="name" required placeholder="山田 太郎" />
+              </div>
+              <div class="form-group">
+                <label for="contact-company">会社名 <span class="required">*</span></label>
+                <input type="text" id="contact-company" name="company" required placeholder="株式会社○○" />
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-email">メールアドレス <span class="required">*</span></label>
+                <input type="email" id="contact-email" name="email" required placeholder="example@company.com" />
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">電話番号</label>
+                <input type="tel" id="contact-phone" name="phone" placeholder="03-1234-5678" />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-subject">件名 <span class="required">*</span></label>
+              <select id="contact-subject" name="subject" required>
+                <option value="">選択してください</option>
+                <option value="PUCに関する問い合わせ">PUCに関する問い合わせ</option>
+                <option value="Pucreアプリに関する問い合わせ">Pucreアプリに関する問い合わせ</option>
+                <option value="取材に関する問い合わせ">取材に関する問い合わせ</option>
+                <option value="広告出稿に関するお問い合わせ">広告出稿に関するお問い合わせ</option>
+                <option value="当社とのパートナーシップに関する問い合わせ">当社とのパートナーシップに関する問い合わせ</option>
+                <option value="資料請求">資料請求</option>
+              </select>
+            </div>
+            
+            <!-- 資料選択（資料請求選択時のみ表示） -->
+            <div class="form-group" id="documents-group" style="display: none;">
+              <label for="contact-documents">ご希望の資料 <span class="required">*</span></label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="documents[]" value="サービス資料" />
+                  <span>サービス資料</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="documents[]" value="脱炭素社会の未来比較資料" />
+                  <span>脱炭素社会の未来比較資料</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="documents[]" value="自治体向け事例資料" />
+                  <span>自治体向け事例資料</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="documents[]" value="エネルギー企業向け事例資料" />
+                  <span>エネルギー企業向け事例資料</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="documents[]" value="メーカー企業向け事例資料" />
+                  <span>メーカー企業向け事例資料</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-message">お問い合わせ内容 <span class="required" id="message-required">*</span></label>
+              <textarea id="contact-message" name="message" required rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-form-submit">
+              <span>送信する</span>
+              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="contact-info scroll-reveal">
+          <div class="contact-info-item">
+            <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="contact-info-text">
+              <h4>Email</h4>
+              <a href="mailto:contact@ao-ra.com">contact@ao-ra.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       NEWS DETAIL MODAL
+  ======================================== -->
+  <div id="newsModal" class="news-modal" aria-hidden="true">
+    <div class="news-modal-overlay"></div>
+    <div class="news-modal-content">
+      <button class="news-modal-close" aria-label="閉じる">&times;</button>
+      <div class="news-modal-body">
+        <!-- Content will be loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================
+       FOOTER
+  ======================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <div class="logo-wrapper">
+              <img src="images/aora-04.png" alt="aora logo" class="logo-icon-img logo-light">
+              <img src="images/aora-06.png" alt="aora logo" class="logo-icon-img logo-dark">
+              <img src="images/aora-03.png" alt="aora" class="logo-text-img logo-light">
+              <img src="images/aora-05.png" alt="aora" class="logo-text-img logo-dark">
+            </div>
+          </div>
+          <p class="footer-tagline">Creative Fintech Studio</p>
+          <p class="footer-description">
+            未来のための循環型経済を創造する
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#what-we-do">What We Do</a></li>
+              <li><a href="#puc">PUC</a></li>
+              <li><a href="#approach">Approach</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="mailto:contact@ao-ra.com">contact@ao-ra.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 aora株式会社. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       JavaScript
+  ======================================== -->
+  <script src="js/cms-loader.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Netlify Identity redirect handler -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

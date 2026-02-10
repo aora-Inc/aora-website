@@ -1,0 +1,11 @@
+# Custom headers for Netlify
+
+# Forms
+/success.html
+  X-Robots-Tag: noindex
+  
+/success-en.html
+  X-Robots-Tag: noindex
+
+/forms.html
+  X-Robots-Tag: noindex

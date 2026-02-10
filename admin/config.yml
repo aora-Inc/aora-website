@@ -1,0 +1,96 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# ローカル開発用（オプション）
+# local_backend: true
+
+# メディアファイルの保存先
+media_folder: "images/news"
+public_folder: "/images/news"
+
+# ロケール設定
+locale: "ja"
+
+# コレクション定義
+collections:
+  # ニュースリリース
+  - name: "news"
+    label: "News & Updates"
+    label_singular: "News Article"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      # ID（自動生成）
+      - {label: "ID", name: "id", widget: "uuid"}
+      
+      # 日本語タイトル
+      - {label: "タイトル（日本語）", name: "title_ja", widget: "string", required: true}
+      
+      # 英語タイトル
+      - {label: "Title (English)", name: "title_en", widget: "string", required: true}
+      
+      # 日本語本文
+      - {label: "本文（日本語）", name: "content_ja", widget: "markdown", required: true}
+      
+      # 英語本文
+      - {label: "Content (English)", name: "content_en", widget: "markdown", required: true}
+      
+      # カテゴリー（日本語）
+      - {
+          label: "カテゴリー", 
+          name: "category", 
+          widget: "select", 
+          options: ["プレスリリース", "イベント", "製品発表", "パートナーシップ", "その他"],
+          default: "プレスリリース"
+        }
+      
+      # カテゴリー（英語）
+      - {
+          label: "Category (English)", 
+          name: "category_en", 
+          widget: "select", 
+          options: ["Press Release", "Event", "Product Launch", "Partnership", "Other"],
+          default: "Press Release"
+        }
+      
+      # 公開日時
+      - {label: "公開日時", name: "published_date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss.SSSZ", required: true}
+      
+      # 注目記事フラグ
+      - {label: "注目記事", name: "featured", widget: "boolean", default: false}
+      
+      # サムネイル画像
+      - {label: "サムネイル画像", name: "image_url", widget: "image", required: false}
+      
+      # タグ
+      - {
+          label: "タグ", 
+          name: "tags", 
+          widget: "list", 
+          required: false,
+          hint: "検索用のタグを追加（例: PUC, Pucre, 脱炭素）"
+        }
+      
+      # 公開ステータス
+      - {
+          label: "公開ステータス", 
+          name: "status", 
+          widget: "select", 
+          options: ["published", "draft"],
+          default: "published"
+        }
+
+# エディタのカスタマイズ
+editor:
+  preview: true
+
+# サイト設定
+site_url: https://aora-inc.netlify.app
+display_url: https://aora-inc.netlify.app
+
+# ロゴ設定（オプション）
+logo_url: /images/aora-04.png
