@@ -1,16 +1,19 @@
-# Netlify Redirects
+# Netlify Redirects - 重要: 上から順に評価される
 
-# JSONファイルは常に直接配信（リダイレクトしない）
-/content/*.json  200!
-/*.json  200!
+# JSONファイルは絶対にリダイレクトしない（最優先）
+/content/news-index.json  /content/news-index.json  200!
+/content/*.json           /content/:splat.json      200!
+/*.json                   /:splat.json              200!
+
+# 静的ファイルは直接配信
+/css/*     200
+/js/*      200
+/images/*  200
+/content/* 200
 
 # Admin ページ（CMSアクセス用）
 /admin/*  /admin/index.html  200
 
 # フォーム送信後のサクセスページ
-/success  /success.html  200
+/success     /success.html     200
 /success-en  /success-en.html  200
-
-# SPA fallback - HTML以外のすべての404を index.html にリダイレクト
-# 注意: JSONファイルは上記のルールで除外されている
-/*    /index.html   200

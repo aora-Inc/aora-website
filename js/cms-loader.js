@@ -81,40 +81,25 @@ async function loadCMSNews() {
   try {
     // content/newsディレクトリのMarkdownファイルを取得
     // 注: 静的サイトでは事前にビルド時に生成されたJSONを使用
+    console.log('🔄 Loading CMS news from /content/news-index.json...');
     const response = await fetch('/content/news-index.json');
     if (!response.ok) {
-      console.log('CMS news index not found, using API fallback');
+      console.log('⚠️  CMS news index not found, using API fallback');
       return [];
     }
     
-    const newsFiles = await response.json();
-    const newsPromises = newsFiles.map(async file => {
-      const res = await fetch(`/content/news/${file}`);
-      const text = await res.text();
-      const parsed = parseMarkdown(text);
-      
-      if (!parsed) return null;
-      
-      return {
-        id: parsed.data.id || file.replace('.md', ''),
-        title_ja: parsed.data.title_ja,
-        title_en: parsed.data.title_en,
-        content_ja: parsed.data.content_ja,
-        content_en: parsed.data.content_en,
-        category: parsed.data.category,
-        category_en: parsed.data.category_en,
-        published_date: parsed.data.published_date,
-        featured: parsed.data.featured === true || parsed.data.featured === 'true',
-        image_url: parsed.data.image_url || '',
-        tags: parsed.data.tags || [],
-        status: parsed.data.status || 'published'
-      };
-    });
+    const indexData = await response.json();
+    console.log('✅ CMS news index loaded:', indexData);
     
-    const news = await Promise.all(newsPromises);
-    return news.filter(n => n && n.status === 'published');
+    if (!indexData.news || indexData.news.length === 0) {
+      console.log('⚠️  No news articles in CMS index');
+      return [];
+    }
+    
+    console.log(`📰 Found ${indexData.news.length} articles in CMS`);
+    return indexData.news;
   } catch (error) {
-    console.error('Error loading CMS news:', error);
+    console.error('❌ Error loading CMS news:', error);
     return [];
   }
 }
