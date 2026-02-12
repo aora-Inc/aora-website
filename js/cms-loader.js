@@ -81,8 +81,8 @@ async function loadCMSNews() {
   try {
     // content/newsディレクトリのMarkdownファイルを取得
     // 注: 静的サイトでは事前にビルド時に生成されたJSONを使用
-    console.log('🔄 Loading CMS news from /content/news-index.json...');
-    const response = await fetch('/content/news-index.json');
+    console.log('🔄 Loading CMS news from /news-index.json...');
+    const response = await fetch('/news-index.json');
     if (!response.ok) {
       console.log('⚠️  CMS news index not found, using API fallback');
       return [];

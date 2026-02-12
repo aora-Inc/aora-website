@@ -10,7 +10,10 @@ const path = require('path');
 const matter = require('gray-matter');
 
 const newsDir = path.join(__dirname, '../content/news');
-const outputFile = path.join(__dirname, '../content/news-index.json');
+const outputFile = path.join(__dirname, '../news-index.json'); // ルートに配置
+
+// content/ にもコピー（バックアップ用）
+const contentOutputFile = path.join(__dirname, '../content/news-index.json');
 
 function generateNewsIndex() {
   // content/news ディレクトリが存在するか確認
@@ -51,7 +54,7 @@ function generateNewsIndex() {
       category_en: data.category_en || '',
       published_date: data.published_date ? new Date(data.published_date).getTime() : Date.now(),
       featured: data.featured || false,
-      image_url: data.image_url || '',
+      image_url: data.featured_image || '',
       tags: data.tags || []
     };
   });
@@ -59,12 +62,17 @@ function generateNewsIndex() {
   // 公開日時でソート（新しい順）
   news.sort((a, b) => b.published_date - a.published_date);
 
-  // news-index.json を生成
+  // news-index.json を生成（ルートとcontent/の両方）
   const indexData = { news };
+  
+  // ルートディレクトリに配置
   fs.writeFileSync(outputFile, JSON.stringify(indexData, null, 2));
-
   console.log(`✅ Generated news index with ${news.length} articles`);
-  console.log(`   Output: ${outputFile}`);
+  console.log(`   Output (root): ${outputFile}`);
+  
+  // content/ ディレクトリにもコピー（バックアップ）
+  fs.writeFileSync(contentOutputFile, JSON.stringify(indexData, null, 2));
+  console.log(`   Output (content): ${contentOutputFile}`);
 }
 
 try {
