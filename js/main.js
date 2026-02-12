@@ -259,22 +259,27 @@ if ('loading' in HTMLImageElement.prototype) {
   document.body.appendChild(script);
 }
 
-// Preload critical images
-function preloadImages() {
-  const criticalImages = [
-    'https://www.genspark.ai/api/files/s/xWJw0h0i',
-    'https://www.genspark.ai/api/files/s/HN0PWg3b',
-    'https://www.genspark.ai/api/files/s/yhENBMsh'
-  ];
-  
-  criticalImages.forEach(src => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = src;
-    document.head.appendChild(link);
-  });
-}
+// ========================================
+// 6. PERFORMANCE OPTIMIZATIONS
+// ========================================
+
+// Preload critical images - DISABLED
+// これらの画像はスクロール後に表示されるため、プリロード不要
+// function preloadImages() {
+//   const criticalImages = [
+//     'https://www.genspark.ai/api/files/s/xWJw0h0i',
+//     'https://www.genspark.ai/api/files/s/HN0PWg3b',
+//     'https://www.genspark.ai/api/files/s/yhENBMsh'
+//   ];
+//   
+//   criticalImages.forEach(src => {
+//     const link = document.createElement('link');
+//     link.rel = 'preload';
+//     link.as = 'image';
+//     link.href = src;
+//     document.head.appendChild(link);
+//   });
+// }
 
 // Defer non-critical JavaScript
 function deferNonCritical() {
@@ -482,11 +487,11 @@ document.addEventListener('DOMContentLoaded', loadNewsPreview);
 // Run optimizations
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
-    preloadImages();
+    // preloadImages(); // DISABLED - 警告を回避
     deferNonCritical();
   });
 } else {
-  preloadImages();
+  // preloadImages(); // DISABLED - 警告を回避
   deferNonCritical();
 }
 
